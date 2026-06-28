@@ -65,18 +65,6 @@
     "created_at": "2026-06-27T10:00:00.000000"
   },
   {
-    "id": "17263f5b-b45f-4734-820c-6ce20692fbaa",
-    "title": "complete a classy claude code project",
-    "subtasks": [
-      "Step 1: complete a classy claude code project",
-      "Step 2: complete a classy claude code project",
-      "Step 3: complete a classy claude code project"
-    ],
-    "completed": false,
-    "completed_at": null,
-    "created_at": "2026-06-27T10:26:33.361742"
-  },
-  {
     "id": "0fa7a3f6-1608-4f62-995f-e140ff937e72",
     "title": "create an A grade IOS application",
     "subtasks": [
@@ -87,5 +75,32 @@
     "completed": true,
     "completed_at": "2026-06-28T07:33:32.155035",
     "created_at": "2026-06-27T12:15:57.386777"
+  },
+  {
+    "id": "a5769f9a-cd61-4e2b-861e-f6312e7f6787",
+    "title": "manage my git repo",
+    "subtasks": [
+      "commit changes",
+      "push to remote",
+      "pull from remote",
+      "check repo status"
+    ],
+    "completed": false,
+    "completed_at": null,
+    "created_at": "2026-06-28T17:44:55.235886"
+  },
+  {
+    "id": "144b08ac-12eb-4167-9930-ba2b90edb222",
+    "title": "complete a classy claude code project",
+    "subtasks": [
+      "Design the project architecture",
+      "Implement the backend functionality",
+      "Develop the frontend user interface",
+      "Test and debug the code",
+      "Refine and polish the final product"
+    ],
+    "completed": false,
+    "completed_at": null,
+    "created_at": "2026-06-28T17:45:52.436609"
   }
 ]
