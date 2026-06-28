@@ -1,0 +1,9 @@
+node_modules/
+env/
+__pycache__/
+*.pyc
+.env
+backend/venv/
+backend/__pycache__/
+backend/data/tavily_cache.json
+.claude/settings.local.json

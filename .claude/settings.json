@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "postToolUse": [
+      {
+        "tools": ["Write", "Edit"],
+        "fileGlob": "**/*.py",
+        "command": "python -m black {file_path} --quiet",
+        "async": false,
+        "description": "Auto-format Python files with black"
+      }
+    ],
+    "stop": [
+      {
+        "command": "echo '[DailyPulse] Claude finished — review output above' >&2",
+        "async": true,
+        "description": "Print finish message"
+      }
+    ]
+  },
+  "mcpServers": {
+    "tavily-remote-mcp": {
+      "type": "http",
+      "url": "https://mcp.tavily.com/mcp/"
+    }
+  }
+}
