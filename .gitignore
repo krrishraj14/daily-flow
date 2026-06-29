@@ -7,3 +7,4 @@ backend/venv/
 backend/__pycache__/
 backend/data/tavily_cache.json
 .claude/settings.local.json
+command\ and\ prompts-please\ igonre/
