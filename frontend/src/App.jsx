@@ -44,10 +44,12 @@ export default function App() {
     setNewsLoading(true)
     try {
       const res = await fetch(`${API}/ai-news`)
-      if (!res.ok) throw new Error('Failed to fetch news')
+      if (!res.ok) throw new Error(`Failed to fetch news: ${res.status}`)
       const data = await res.json()
+      console.log('[DEBUG] AI News fetched:', data)
       setNews(data.news || [])
-    } catch {
+    } catch (err) {
+      console.error('[ERROR] Failed to fetch AI news:', err)
       setNews([])
     } finally {
       setNewsLoading(false)
