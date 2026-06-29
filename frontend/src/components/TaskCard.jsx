@@ -4,12 +4,27 @@ import Confetti from './Confetti'
 const API = 'http://localhost:8000'
 
 /**
- * @param {{ task: object, onComplete: (id: string) => void, onUncomplete: (id: string) => void, onDelete: (id: string) => void, onTaskUpdate: (updatedTask: object) => void, darkMode: boolean }} props
+ * @param {{ task: object, onComplete: (id: string) => void, onUncomplete: (id: string) => void, onDelete: (id: string) => void, onTaskUpdate: (updatedTask: object) => void, darkMode: boolean, searchQuery: string }} props
  */
-export default function TaskCard({ task, onComplete, onUncomplete, onDelete, onTaskUpdate, darkMode }) {
+export default function TaskCard({ task, onComplete, onUncomplete, onDelete, onTaskUpdate, darkMode, searchQuery = '' }) {
   const isCompleted = task.completed
   const [showConfetti, setShowConfetti] = useState(false)
   const [showTooltip, setShowTooltip] = useState(false)
+
+  const highlightText = (text) => {
+    if (!searchQuery.trim()) return text
+    const regex = new RegExp(`(${searchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')
+    const parts = text.split(regex)
+    return parts.map((part, i) =>
+      regex.test(part) ? (
+        <span key={i} className="bg-yellow-300 dark:bg-yellow-600 font-semibold rounded px-1">
+          {part}
+        </span>
+      ) : (
+        part
+      )
+    )
+  }
 
   const handleSubtaskToggle = useCallback(async (index) => {
     try {
@@ -72,7 +87,7 @@ export default function TaskCard({ task, onComplete, onUncomplete, onDelete, onT
               isCompleted ? (darkMode ? 'line-through text-gray-600' : 'line-through text-gray-400') : (darkMode ? 'text-gray-100' : 'text-gray-800')
             }`}
           >
-            {task.title}
+            {highlightText(task.title)}
           </h3>
         </div>
 
@@ -123,7 +138,7 @@ export default function TaskCard({ task, onComplete, onUncomplete, onDelete, onT
                   )}
                 </button>
                 <span className={`flex-1 ${isSubtaskCompleted ? (darkMode ? 'line-through text-gray-600' : 'line-through text-gray-400') : ''}`}>
-                  {subtaskObj.text}
+                  {highlightText(subtaskObj.text)}
                 </span>
               </li>
             )

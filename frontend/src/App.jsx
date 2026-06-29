@@ -127,7 +127,7 @@ export default function App() {
                 <div className={`h-24 rounded-2xl ${darkMode ? 'bg-slate-700' : 'bg-gray-100'}`} />
               </div>
             ) : (
-              <TaskManager tasks={filteredTasks} onTasksChange={setTasks} darkMode={darkMode} />
+              <TaskManager tasks={filteredTasks} onTasksChange={setTasks} darkMode={darkMode} searchQuery={searchQuery} />
             )}
           </div>
 

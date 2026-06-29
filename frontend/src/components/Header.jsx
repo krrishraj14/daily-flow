@@ -34,6 +34,11 @@ export default function Header({ onRefresh, darkMode, onDarkModeChange, onSearch
             setSearchInput(e.target.value)
             onSearch(e.target.value)
           }}
+          onKeyPress={(e) => {
+            if (e.key === 'Enter') {
+              onSearch(searchInput)
+            }
+          }}
           onFocus={(e) => e.target.style.width = '256px'}
           onBlur={(e) => {
             if (!searchInput) {

@@ -5,9 +5,9 @@ import CloudAnimation from './CloudAnimation'
 const API = 'http://localhost:8000'
 
 /**
- * @param {{ tasks: object[], onTasksChange: (tasks: object[]) => void, darkMode: boolean }} props
+ * @param {{ tasks: object[], onTasksChange: (tasks: object[]) => void, darkMode: boolean, searchQuery: string }} props
  */
-export default function TaskManager({ tasks, onTasksChange, darkMode }) {
+export default function TaskManager({ tasks, onTasksChange, darkMode, searchQuery = '' }) {
   const [input, setInput] = useState('')
   const [adding, setAdding] = useState(false)
   const [error, setError] = useState(null)
@@ -158,6 +158,7 @@ export default function TaskManager({ tasks, onTasksChange, darkMode }) {
                   onDelete={handleDelete}
                   onTaskUpdate={(updated) => onTasksChange(tasks.map(t => (t.id === updated.id ? updated : t)))}
                   darkMode={darkMode}
+                  searchQuery={searchQuery}
                 />
               </div>
             ))}
@@ -194,6 +195,7 @@ export default function TaskManager({ tasks, onTasksChange, darkMode }) {
                   onDelete={handleDelete}
                   onTaskUpdate={(updated) => onTasksChange(tasks.map(t => (t.id === updated.id ? updated : t)))}
                   darkMode={darkMode}
+                  searchQuery={searchQuery}
                 />
               ))}
             </div>
