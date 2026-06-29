@@ -1,0 +1,224 @@
+[
+  {
+    "id": "a1b2c3d4-0001-4000-8000-000000000001",
+    "title": "Review pull requests",
+    "subtasks": [
+      "Open GitHub and check open PRs",
+      "Read through the code changes",
+      "Leave comments or approve",
+      "Follow up with teammates if needed"
+    ],
+    "completed": true,
+    "completed_at": "2026-06-27T09:30:00.000000",
+    "created_at": "2026-06-27T08:00:00.000000"
+  },
+  {
+    "id": "a1b2c3d4-0002-4000-8000-000000000002",
+    "title": "Write unit tests for auth module",
+    "subtasks": [
+      "List all functions in the auth module",
+      "Write test cases for login flow",
+      "Write test cases for token validation",
+      "Run tests and fix failures"
+    ],
+    "completed": true,
+    "completed_at": "2026-06-27T11:00:00.000000",
+    "created_at": "2026-06-27T08:15:00.000000"
+  },
+  {
+    "id": "a1b2c3d4-0003-4000-8000-000000000003",
+    "title": "Update project documentation",
+    "subtasks": [
+      "Review existing README",
+      "Add setup instructions",
+      "Document new API endpoints",
+      "Proofread and publish"
+    ],
+    "completed": true,
+    "completed_at": "2026-06-28T18:00:43.495371",
+    "created_at": "2026-06-27T08:30:00.000000"
+  },
+  {
+    "id": "a1b2c3d4-0004-4000-8000-000000000004",
+    "title": "Fix login page UI bug",
+    "subtasks": [
+      "Reproduce the bug locally",
+      "Inspect element and find the broken CSS",
+      "Apply fix and test on different screen sizes",
+      "Push fix and request review"
+    ],
+    "completed": true,
+    "completed_at": "2026-06-28T18:00:42.765703",
+    "created_at": "2026-06-27T09:00:00.000000"
+  },
+  {
+    "id": "a1b2c3d4-0005-4000-8000-000000000005",
+    "title": "Plan sprint for next week",
+    "subtasks": [
+      "Review backlog and pick top priority items",
+      "Estimate effort for each task",
+      "Assign tasks to team members",
+      "Create sprint in project tracker"
+    ],
+    "completed": true,
+    "completed_at": "2026-06-28T18:00:41.960059",
+    "created_at": "2026-06-27T10:00:00.000000"
+  },
+  {
+    "id": "0fa7a3f6-1608-4f62-995f-e140ff937e72",
+    "title": "create an A grade IOS application",
+    "subtasks": [
+      "Step 1: create an A grade IOS application",
+      "Step 2: create an A grade IOS application",
+      "Step 3: create an A grade IOS application"
+    ],
+    "completed": true,
+    "completed_at": "2026-06-28T07:33:32.155035",
+    "created_at": "2026-06-27T12:15:57.386777"
+  },
+  {
+    "id": "a5769f9a-cd61-4e2b-861e-f6312e7f6787",
+    "title": "manage my git repo",
+    "subtasks": [
+      "commit changes",
+      "push to remote",
+      "pull from remote",
+      "check repo status"
+    ],
+    "completed": true,
+    "completed_at": "2026-06-28T18:00:41.146031",
+    "created_at": "2026-06-28T17:44:55.235886"
+  },
+  {
+    "id": "144b08ac-12eb-4167-9930-ba2b90edb222",
+    "title": "complete a classy claude code project",
+    "subtasks": [
+      "Design the project architecture",
+      "Implement the backend functionality",
+      "Develop the frontend user interface",
+      "Test and debug the code",
+      "Refine and polish the final product"
+    ],
+    "completed": true,
+    "completed_at": "2026-06-28T18:00:40.123438",
+    "created_at": "2026-06-28T17:45:52.436609"
+  },
+  {
+    "id": "9159fb90-6658-4522-a59e-08680c720f45",
+    "title": "make a movie",
+    "subtasks": [
+      "Develop a screenplay",
+      "Assemble a film crew and cast",
+      "Shoot and record footage",
+      "Edit the film and add visual effects"
+    ],
+    "completed": true,
+    "completed_at": "2026-06-28T18:15:41.452597",
+    "created_at": "2026-06-28T18:15:37.880614"
+  },
+  {
+    "id": "8bb8be29-502e-4d9d-b377-091e57572b74",
+    "title": "write an artical",
+    "subtasks": [
+      "Research the topic",
+      "Create an outline",
+      "Write the first draft",
+      "Edit and revise the article"
+    ],
+    "completed": true,
+    "completed_at": "2026-06-28T18:17:30.133383",
+    "created_at": "2026-06-28T18:17:25.544246"
+  },
+  {
+    "id": "d56fbb8f-711a-4dcf-bcc1-446f5ceb4775",
+    "title": "sing a song",
+    "subtasks": [
+      "Choose a song to sing",
+      "Warm up your voice",
+      {
+        "text": "Practice the lyrics and melody",
+        "completed": false
+      },
+      "Perform the song"
+    ],
+    "completed": false,
+    "completed_at": null,
+    "created_at": "2026-06-28T18:20:43.676851"
+  },
+  {
+    "id": "bc52f6fa-37ad-4b42-8dd7-30be7ce7e27b",
+    "title": "get a job",
+    "subtasks": [
+      "Update your resume",
+      "Search for job openings",
+      "Prepare for interviews",
+      "Network with potential employers"
+    ],
+    "completed": false,
+    "completed_at": null,
+    "created_at": "2026-06-28T18:21:56.563858"
+  },
+  {
+    "id": "e7ca9bfd-dbd3-4cda-bd06-6eb70b12ff1e",
+    "title": "Test undo task",
+    "subtasks": [
+      "Perform an action",
+      "Undo the action",
+      "Verify the action has been undone",
+      "Redo the undone action"
+    ],
+    "completed": false,
+    "completed_at": null,
+    "created_at": "2026-06-29T06:19:00.773074"
+  },
+  {
+    "id": "ce8e8080-a215-4daf-88c8-6e9db24104c0",
+    "title": "Test subtask selection",
+    "subtasks": [
+      {
+        "text": "Define subtask criteria",
+        "completed": false
+      },
+      {
+        "text": "Identify relevant subtasks",
+        "completed": false
+      },
+      {
+        "text": "Prioritize subtasks",
+        "completed": false
+      },
+      {
+        "text": "Validate subtask selection",
+        "completed": false
+      }
+    ],
+    "completed": false,
+    "completed_at": null,
+    "created_at": "2026-06-29T06:39:21.790559"
+  },
+  {
+    "id": "38319744-beb7-41ee-aa8e-97a64d265325",
+    "title": "Test subtask selection",
+    "subtasks": [
+      {
+        "text": "Define testing scope",
+        "completed": false
+      },
+      {
+        "text": "Identify subtask criteria",
+        "completed": false
+      },
+      {
+        "text": "Create test cases",
+        "completed": false
+      },
+      {
+        "text": "Execute testing",
+        "completed": false
+      }
+    ],
+    "completed": false,
+    "completed_at": null,
+    "created_at": "2026-06-29T06:39:28.662576"
+  }
+]

@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+* {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Dark mode overrides using CSS variables */
+html.dark {
+  --color-bg-primary: #1e293b;
+  --color-bg-secondary: #0f172a;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #cbd5e1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
