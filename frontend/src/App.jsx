@@ -23,6 +23,7 @@ export default function App() {
 
   const [tasks, setTasks] = useState([])
   const [tasksLoading, setTasksLoading] = useState(true)
+  const [searchQuery, setSearchQuery] = useState('')
 
   const fetchBriefing = useCallback(async () => {
     setBriefingLoading(true)
@@ -80,19 +81,31 @@ export default function App() {
     console.log('Dark mode toggled:', darkMode)
   }, [darkMode])
 
-  const completedCount = tasks.filter(t => t.completed).length
-
   const handleRefresh = useCallback(() => {
     fetchBriefing()
     fetchNews()
   }, [fetchBriefing, fetchNews])
+
+  const filteredTasks = searchQuery.trim()
+    ? tasks.filter(task => {
+        const query = searchQuery.toLowerCase()
+        const titleMatch = task.title.toLowerCase().includes(query)
+        const subtaskMatch = task.subtasks && task.subtasks.some(st => {
+          const subtaskText = typeof st === 'string' ? st : st.text
+          return subtaskText.toLowerCase().includes(query)
+        })
+        return titleMatch || subtaskMatch
+      })
+    : tasks
+
+  const completedCount = filteredTasks.filter(t => t.completed).length
 
   return (
     <div
       className="min-h-screen bg-[#F8FAFC] dark:bg-slate-950"
       style={darkMode ? { backgroundColor: '#020617' } : { backgroundColor: '#F8FAFC' }}
     >
-      <Header onRefresh={handleRefresh} darkMode={darkMode} onDarkModeChange={setDarkMode} />
+      <Header onRefresh={handleRefresh} darkMode={darkMode} onDarkModeChange={setDarkMode} onSearch={setSearchQuery} />
 
       <main className="max-w-6xl mx-auto px-4 py-6 flex flex-col gap-6">
         <BriefingCard
@@ -114,7 +127,7 @@ export default function App() {
                 <div className={`h-24 rounded-2xl ${darkMode ? 'bg-slate-700' : 'bg-gray-100'}`} />
               </div>
             ) : (
-              <TaskManager tasks={tasks} onTasksChange={setTasks} darkMode={darkMode} />
+              <TaskManager tasks={filteredTasks} onTasksChange={setTasks} darkMode={darkMode} />
             )}
           </div>
 
