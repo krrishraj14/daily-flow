@@ -25,7 +25,7 @@ export default function Header({ onRefresh, darkMode, onDarkModeChange, onSearch
 
       <WelcomeButton />
 
-      <div className="relative flex items-center hidden sm:flex ml-auto mr-4">
+      <div className="relative flex items-center hidden sm:flex">
         <input
           type="text"
           placeholder="Search tasks..."
@@ -34,15 +34,18 @@ export default function Header({ onRefresh, darkMode, onDarkModeChange, onSearch
             setSearchInput(e.target.value)
             onSearch(e.target.value)
           }}
-          className={`w-10 h-10 rounded-full border-2 outline-none pl-10 pr-3 py-2 transition-all duration-500 ease-in-out font-medium text-sm ${
-            searchInput
-              ? darkMode
-                ? 'w-64 bg-slate-700 border-blue-600 text-gray-100 placeholder-gray-400'
-                : 'w-64 bg-blue-50 border-blue-500 text-gray-800 placeholder-gray-500'
-              : darkMode
-              ? 'bg-slate-800 border-slate-700 text-gray-400 placeholder-gray-500'
-              : 'bg-white border-gray-200 text-gray-400 placeholder-gray-500'
+          onFocus={(e) => e.target.style.width = '256px'}
+          onBlur={(e) => {
+            if (!searchInput) {
+              e.target.style.width = '40px'
+            }
+          }}
+          className={`h-10 rounded-full border-2 outline-none pl-10 pr-3 transition-all duration-300 font-medium text-sm cursor-text ${
+            darkMode
+              ? 'bg-slate-800 border-blue-500 text-gray-100 placeholder-gray-400 focus:bg-slate-700 focus:border-blue-600'
+              : 'bg-white border-blue-400 text-gray-800 placeholder-gray-500 focus:bg-blue-50 focus:border-blue-600'
           }`}
+          style={{ width: searchInput ? '256px' : '40px' }}
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"
